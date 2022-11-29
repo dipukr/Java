@@ -1,0 +1,86 @@
+int digitCount(int n)
+int digitSum(int n)
+int digital(int n)
+int mod(int a, int b)
+int gcd(int n)
+int reverse(int n)
+int factorial(int n)
+int fibonacci(int n)
+int sqrt(int n)
+int atoi(String s)
+int atof(String s)
+int power(int x, int n)
+int swap(int a, int b)
+int lonely(int nums[])
+int max(int nums[])
+int secondMax(int nums[])
+int nthMax(int nums[])
+int primeCount(int n)
+int conversion(int n, int from, int to)
+int decimal(char hexchar)
+int decimal(String binary)
+int decimal(String octal)
+int decimal(String hex)
+int decimal(int binary)
+int decimal(int octal)
+int binary(int decimal)
+int octal(int decimal)
+String hex(int decimal)
+
+int addBinary(int a, int b)
+int mulBinary(int a, int b)
+
+String addBinary(String a, String b)
+String subBinary(String a, String b)
+String mulBinary(String a, String b)
+String divBinary(String a, String b)
+String modBinary(String a, String b)
+
+List<int> addBinary(List<int> a, List<int> b)
+List<int> subBinary(List<int> a, List<int> b)
+List<int> mulBinary(List<int> a, List<int> b)
+List<int> divBinary(List<int> a, List<int> b)
+List<int> modBinary(List<int> a, List<int> b)
+
+List<int> addDecimal(List<int> a, List<int> b)
+List<int> subDecimal(List<int> a, List<int> b)
+List<int> mulDecimal(List<int> a, List<int> b)
+List<int> divDecimal(List<int> a, List<int> b)
+List<int> modDecimal(List<int> a, List<int> b)
+
+
+
+void printDec(int n)
+void printInc(int n)
+void printArray(int arr[])
+void printDigit(int n, int b)
+
+
+boolean isOdd(int n)
+boolean isEven(int n)
+boolean isPrime(int n)
+boolean triplet(int x, int y, int z)
+boolean balancedParen(String s)
+boolean containsDuplicates(int arr[])
+
+int evaluateInfix(String s)
+int evaluatePrefix(String s)
+int evaluatePostfix(String s)
+
+List<int> factors(int n)
+
+int parseInt(String s)
+int parseInt(String s, int from, int to, int radix)
+float parseFloat(String s)
+String upper(String s)
+String lower(String s)
+String reverse(String s)
+String findLargestWord(String sentence)
+int findLargestWordLength(String sentence)
+
+
+
+List<int> merge(List<int> a, List<int> b)
+
+int fibonacciDP(int n)
+int maxSumSubarrayDP(int nums[])
