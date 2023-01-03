@@ -2,19 +2,24 @@ public class Consumer {
 
 	public String GET(String urls) throws Exception {
 		URL url = new URL(urls);
-		var conn = (HttpURLConnection) url.openConnection();
-		conn.setRequestProperty("Accept", "application/json");
-		conn.setRequestMethod("POST");
-		if (conn.getResponseCode() != 200) return;
-		InputStreamReader isr = new InputStreamReader(conn.getOutputStream());
-		BufferedReader br = new BufferedReader(isr);
-		String output;
-		StringBuilder sb = new StringBuilder();
-		sb.append("Response from server.\n\n");
-		while ((output = br.readLine()) != null)
-			sb.append(output).append('\n');
-		conn.disconnect();
-		sb.toString();
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		connection.setRequestProperty("Accept", "application/json");
+		connection.setRequestProperty("Cookie", "ccc");
+		connection.setRequestMethod("GET");
+		connection.setDoInput(true);
+		if (connection.getResponseCode() != 200) return;
+		InputStream inputStream = connection.getInputStream();
+		InputStreamReader isr = new InputStreamReader(inputStream);
+		BufferedReader reader = new BufferedReader(isr);
+		StringBuilder data = new StringBuilder();
+		while (true) {
+			String line = reader.readLine();
+			if (Objects.isNull(line)) break;
+			data.append(line).append('\n');
+		}
+		connection.disconnect();
+		JSONObject json = new JSONObject(String.valueOf(data));
+		return json.toString(4);
 	}
 
 	public String POST(String urls) throws Exception {
